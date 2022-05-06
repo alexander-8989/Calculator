@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <!-- External Links -->
+    <link rel="icon" href="/Calculator/Images/calc.png" type="image/icon">
+    <link rel="stylesheet" href="calculator.css">
+    <script src="calculator.js"></script>
+    <!-- External Links -->
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="title"><u>Calculator</u></h1>
+
+        <input type="text" name="screen" maxlength="50" placeholder="Enter Input" id="screen" onkeydown="keydown(event)"
+            onkeypress="return isAlphabetKey(event)">
+
+        <table cellspacing="0" cellpadding="0" border="none">
+            <tr>
+                <td colspan="2"><input type="button" value="C" class="clear" onclick="clearScr()"></td>
+                <td><input type="button" value="DEL" class="number" onclick="back()"></td>
+                <td><input type="button" value="/" class="number" onclick="display('/')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" class="number" onclick="display('1')"></td>
+                <td><input type="button" value="2" class="number" onclick="display('2')"></td>
+                <td><input type="button" value="3" class="number" onclick="display('3')"></td>
+                <td><input type="button" value="*" class="number" onclick="display('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" class="number" onclick="display('4')"></td>
+                <td><input type="button" value="5" class="number" onclick="display('5')"></td>
+                <td><input type="button" value="6" class="number" onclick="display('6')"></td>
+                <td><input type="button" value="+" class="number" onclick="display('+')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" class="number" onclick="display('7')"></td>
+                <td><input type="button" value="8" class="number" onclick="display('8')"></td>
+                <td><input type="button" value="9" class="number" onclick="display('9')"></td>
+                <td><input type="button" value="-" class="number" onclick="display('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value=" . " class="number" onclick="display('.')"></td>
+                <td><input type="button" value="0" class="number" onclick="display('0')"></td>
+                <td colspan="2"><input type="button" value="=" class="equals" onclick="calculate('=')"></td>
+            </tr>
+        </table>
+        <p class="copyright">&copy; 2022 Alexander Appwrk</p>
+    </div>
+
+</body>
+
+</html>
